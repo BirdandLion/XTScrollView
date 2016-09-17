@@ -172,6 +172,8 @@ static int const ImageViewCount = 4;
         }
         
         imageView.tag = index;
+        
+        // 设置图片(如果是传图片, 那么直接设置图片即可, 不用再从网络下载)
         [imageView sd_setImageWithURL:[NSURL URLWithString:self.imageArray[index]] placeholderImage:self.placeHolderImage];
     }
     
